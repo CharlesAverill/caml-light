@@ -28,7 +28,8 @@ value unix_lockf(fd, cmd, span)  /* ML */
 #include <errno.h>
 #include <fcntl.h>
 
-extern int errno;        /* Some people have it in errno.h, some don't ... */
+/* extern int errno; */ 
+#include <errno.h>        /* Some people have it in errno.h, some don't ... */
 
 #ifdef F_SETLK
 

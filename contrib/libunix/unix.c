@@ -269,7 +269,8 @@ void unix_error(errcode, cmdname, cmdarg)
   mlraise(res);
 }
 
-extern int errno;
+/* extern int errno; */ 
+#include <errno.h>
 
 void uerror(cmdname, cmdarg)
      char * cmdname;

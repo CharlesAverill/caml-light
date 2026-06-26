@@ -13,7 +13,7 @@
 /* Library dependencies */
 
 #ifdef HAS_MEMMOVE
-#define bcopy(src,dst,len) memmove((dst), (src), (len))
+//#define bcopy(src,dst,len) memmove((dst), (src), (len))
 #else
 #ifdef HAS_BCOPY
 /* Nothing to do */

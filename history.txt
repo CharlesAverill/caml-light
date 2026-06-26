@@ -87,3 +87,59 @@
   643  ls
   644  git status
   645  history
+  667  find -name libunix
+  668  cd contrib/libunix/
+  669  make all CC="gcc $CFLAGS"
+  670  find -name config.h
+  671  vim ../../src/runtime/config.h
+  672  make all CC="gcc $CFLAGS"
+  673  make all CC="gcc $CFLAGS" CAMLC="../../src/camlrun ../../src/camlcomp -stdlib ../../src/lib"
+  674  make all CC="gcc $CFLAGS" CAMLC="../../src/camlc -stdlib ../../src/lib"
+  675  ls ../../src/camlcomp
+  676  make all CC="gcc $CFLAGS" CAMLC="../../src/camlcomp -stdlib ../../src/lib"
+  677  make all CC="gcc $CFLAGS" CAMLC="../../src/camlrun ../../src/camlcomp -stdlib ../../src/lib"
+  678  make all CC="gcc $CFLAGS"
+  679  cd ..
+  680  ls
+  681  cd ..
+  682  ls
+  683  make install -C src
+  684  make install -C src CC="gcc $CFLAGS"
+  685  make world -C src CC="gcc $CFLAGS"
+  686  make install -C src CC="gcc $CFLAGS"
+  687  clear
+  688  make install -C src CC="gcc $CFLAGS"
+  689  camc
+  690  camlc
+  691  ls
+  692  cd contrib/libunix/
+  693  make clean
+  694  make all CC="gcc $CFLAGS"
+  695  export CFLAGS="-m32 -O2 -w -std=gnu89 -fpermissive -fcommon -Wno-implicit-function-declaration -Wno-implicit-int -Wno-return-type"
+  696  make all CC="gcc $CFLAGS"
+  697  grep rn "extern int errno;" .
+  698  grep rn "extern int errno;" . -r
+  699  grep -rn "extern int errno;" .
+  700  sed -i 's/extern int errno;/\/* extern int errno; *\/ \n#include <errno.h>/g' lockf.c
+  701  sed -i 's/extern int errno;/\/* extern int errno; *\/ \n#include <errno.h>/g' errmsg.c
+  702  sed -i 's/extern int errno;/\/* extern int errno; *\/ \n#include <errno.h>/g' unix.c
+  703  sed -i 's/extern int errno;/\/* extern int errno; *\/ \n#include <errno.h>/g' nice.c
+  704  grep -rn "extern int errno;" .
+  705  make clean
+  706  make all CC="gcc $CFLAGS"
+  707  vim errmsg.c
+  708  make all CC="gcc $CFLAGS"
+  709  sudo make install
+  710  cd ..
+  711  cd ..
+  712  sudo make install -C src
+  713  git status
+  714  git status | head
+  715  git add contrib/*
+  716  git status
+  717  git add -u
+  718  git restore --staged .
+  719  git status
+  720  git add -u
+  721  git status
+  722  history

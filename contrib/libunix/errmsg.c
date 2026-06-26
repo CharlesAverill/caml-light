@@ -1,20 +1,17 @@
 #include <mlvalues.h>
 #include <alloc.h>
 
-extern int errno;
-extern int sys_nerr;
-extern char *sys_errlist[];
+/* extern int errno; */ 
+#include <errno.h>
+//extern int sys_nerr;
+//extern char *sys_errlist[];
 
 extern int error_table[];
 
-value unix_error_message(err)
-     value err;
+#include <string.h>
+
+char * unix_error_message()
 {
-  int errnum;
-  errnum = error_table[Tag_val(err)];
-  if (errnum < 0 || errnum >= sys_nerr) {
-    return copy_string("Unknown error");
-  } else {
-    return copy_string(sys_errlist[errnum]);
-  }
+  return strerror(errno);
 }
+
