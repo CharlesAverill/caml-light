@@ -1,0 +1,89 @@
+  557  git clone https://github.com/nojb/caml-light
+  558  cd caml-light/
+  559  ls
+  560  git tag
+  561  cat README
+  562  cat CHANGES
+  563  head CHANGES
+  564  clear
+  565  head CHANGES
+  566  make configure
+  567  ls
+  568  cat INSTALL
+  569  clear
+  570  less INSTALL
+  571  make configure -C src
+  572  ls -l
+  573  l
+  574  ls
+  575  vim src/Makefile
+  576  gcc
+  577  clear
+  578  make configure -C src
+  579  find -name sizes.c
+  580  vim config/auto-aux/sizes.c
+  581  make configure -C src
+  582  clear
+  583  make configure -C src
+  584  sudo nano /etc/pacman.conf
+  585  sudo vim /etc/pacman.conf
+  586  sudo pacman -Syu gcc-multilib lib32-glibc
+  587  make configure -C src
+  588  clear
+  589  make configure -C src
+  590  export CFLAGS="-m32 -O2 -w -std=gnu89 -fpermissive -Wno-implicit-function-declaration -Wno-implicit-int -Wno-return-type"
+  591  export CPPFLAGS="$CFLAGS"
+  592  export LDFLAGS="-m32"
+  593  make configure -C src
+  594  clear
+  595  make configure -C src
+  596  find -name sizes.c
+  597  vim config/auto-aux/sizes.c
+  598  make configure -C src
+  599  make configure -C src CC="gcc $CFLAGS"
+  600  clear
+  601  make configure -C src CC="gcc $CFLAGS"
+  602  sudo pacman -S lib32-gcc-libs
+  603  make configure -C src CC="gcc $CFLAGS"
+  604  make world CC=make world CC="gcc $CFLAGS"
+  605  make world CC="gcc $CFLAGS"
+  606  make -C src world CC="gcc $CFLAGS"
+  607  vim src/runtime/sys.c
+  608  make -C src world CC="gcc $CFLAGS"
+  609  sudo ln -s /usr/bin/cpp /lib/cpp
+  610  make -C src world CC="gcc $CFLAGS"
+  611  clear
+  612  make -C src world CC="gcc $CFLAGS"
+  613  vim src/lib/filename.ml
+  614  find -name filename.ml
+  615  vim src/lib/filename.ml
+  616  vim src/lib/filename.mli
+  617  vim src/lib/filename.mli
+  618  vim src/lib/filename.ml
+  619  make -C src world CC="gcc $CFLAGS"
+  620  vim src/lib/filename.ml
+  621  make -C src world CC="gcc $CFLAGS"
+  622  vim src/lib/filename.ml
+  623  make -C src world CC="gcc $CFLAGS"
+  624  vim src/lib/filename.ml
+  625  make -C src world CC="gcc $CFLAGS"
+  626  vim src/lib/filename.ml
+  627  make -C src world CC="gcc $CFLAGS"
+  628  cat src/lib/filename.mli
+  629  make -C src world CC="gcc $CFLAGS"
+  630  vim src/lib/filename.ml
+  631  touch src/lib/filename.ml
+  632  cat src/lib/filename.mli
+  633  make -C src world CC="gcc $CFLAGS"
+  634  touch src/lib/filename.ml
+  635  vim src/lib/filename.ml
+  636  make -C src world CC="gcc $CFLAGS"
+  637  make -C src
+  638  make -C src CC="gcc $CFLAGS"
+  639  vim src/Makefile
+  640  make -C src world CC="gcc $CFLAGS"
+  641  vim src/lib/filename.ml
+  642  make -C src world CC="gcc $CFLAGS"
+  643  ls
+  644  git status
+  645  history

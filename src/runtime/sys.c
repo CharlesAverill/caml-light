@@ -46,16 +46,13 @@ char * error_message()
 
 #else
 
-extern int sys_nerr;
-extern char * sys_errlist [];
+#include <string.h>
 
 char * error_message()
 {
-  if (errno < 0 || errno >= sys_nerr)
-    return "unknown error";
-  else
-    return sys_errlist[errno];
+  return strerror(errno);
 }
+
 
 #endif /* HAS_STRERROR */
 
